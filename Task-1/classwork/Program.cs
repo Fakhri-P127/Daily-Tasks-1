@@ -7,7 +7,7 @@ namespace classwork
         static void Main(string[] args)
         {
             int number = Convert.ToInt32(Console.ReadLine());
-            int[] divisible; 
+            int[] divisible; //bolunenler arrayi
             int m = 0;
 
             if (number < 50)
