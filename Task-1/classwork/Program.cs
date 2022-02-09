@@ -7,24 +7,20 @@ namespace classwork
         static void Main(string[] args)
         {
             int number = Convert.ToInt32(Console.ReadLine());
-            int[] divisible= new int[1];
-
+            int[] divisible= new int[number]; //number yazmaqdan basqa bir sey aglima gelmedi
+            int m = 0;
             if (number < 50)
             {
                 for (int i = 3; i <= number; i++)
                 {
                     if (i % 3 == 0)
                     {
-                        for (int m = 0; m <= divisible.Length; m++)
-                        {                          
-                            divisible[m] = i;
-                            break;                          
-                        }
-                        
-                        foreach (int nums in divisible)
+                        if (m <= number/3)
                         {
-                            Console.WriteLine(nums);
-                        }
+                            divisible[m] = i;
+                            Console.WriteLine(divisible[m]);
+                            m++;
+                        }                                              
                     }
                 }             
             }
@@ -35,15 +31,11 @@ namespace classwork
                 {
                     if (i % 5 == 0)
                     {
-                        for (int m = 0; m <= divisible.Length; m++)
+                        if (m <= number/5)
                         {
                             divisible[m] = i;
-                            break;
-                        }
-
-                        foreach (int nums in divisible)
-                        {
-                            Console.WriteLine(nums);
+                            Console.WriteLine(divisible[m]);
+                            m++;
                         }
                     }
                 }
@@ -55,19 +47,15 @@ namespace classwork
                 {
                     if (i % 8 == 0)
                     {
-                        for (int m = 0; m <= divisible.Length; m++)
+                        if (m <= number/8)
                         {
                             divisible[m] = i;
-                            break;
-                        }
-
-                        foreach (int nums in divisible)
-                        {
-                            Console.WriteLine(nums);
+                            Console.WriteLine(divisible[m]);
+                            m++;
                         }
                     }
                 }
-            }            
+            }
         }
     }
 }
